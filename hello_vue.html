@@ -1,0 +1,44 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<div id="app">
+    <h1> Hello Vue!</h1>
+    <p>{{ message | uppercase }}</p>
+    <p> {{ Another_message }}</p>
+    <p>
+        {{Again_Another_message}}
+    </p>
+
+  
+    <button v-on:click="addExclamation">Add !</button>
+    <button onclick="window.location.reload();" id = 'clear'> Clear </button>
+
+</div>
+<script>    
+
+    let app = new Vue({
+        el:'#app',
+        data:{
+            message: 'welcome',
+            Another_message : 'Hello Again!! :)',
+            Again_Another_message : new Date(),
+            points: 0
+
+        },
+        methods: {
+            addExclamation: function() {
+                if (this.points < 10) {
+                let charectorToAdd = '!'
+                this.message = this.message + charectorToAdd
+                this.points++
+                }
+            }
+        },
+
+        filters: {
+            uppercase: function(string) {
+                return string.toUpperCase()
+            }
+        }
+    })
+</script>
