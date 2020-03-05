@@ -1,13 +1,37 @@
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-
+<!DOCTYPE html>
 <html>
+<head>    
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style>
+    #app {
+        margin: auto;
+        background-color: cadetblue;
+        border: solid violet;
+        height: 200px;
+        width: 600px;
+       
+    }
+
+    h1 {
+        color:brown;
+        text-align: center;
+    }
+    td,th {
+        width: 25%;
+        text-align: center;
+
+    }
+    
+</style>
+
+
 <body>
 
 <div id="app">
 <h1> Example shopping cart</h1>
 
-<table>
+<table id="T">
     <tr><th>Item</th><th>Unit</th><th>Quantity</th><th>total</th></tr>
     <tr>
         <td>{{ name }}</td>
